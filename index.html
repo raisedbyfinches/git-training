@@ -22,10 +22,17 @@
             <h1 class="title"><i class="logo fa-brands fa-git-alt"></i> git</h1>
           </div>
         </section>
+        <section data-background-image="./goongit.gif">
+          <aside class="notes">
+            Talk about how they should open the tool of their choice, the supporting material you gave out,
+            that they are the guinea pigs and that feedback forms will be emailed out following the course.
+          </aside>
+        </section>
 
-        <!-- What is the talk about slide -->
+
+        <!-- DESCRIPTION -->
         <section>
-          <section data-background-color="#16161c">
+          <section>
             <h1>About me</h1>
             <h2>🧔🏼</h2>
           </section>
@@ -61,12 +68,374 @@
               <li>Develop skills through hands-on exercises</li>
             </ul>
           </section>
+          <section>
+            <h3>Learning Outcomes</h3>
+            <ul>
+              <li>Implement git workflow strategies</li>
+              <li>Resolve merge conflicts systematically</li>
+              <li>Create and manage feature branches effectively</li>
+              <li>Write descriptive commit messages and pull requests</li>
+            </ul>
+          </section>
         </section>
+
+
+        <!-- INTRODUCTION -->
+        <section>
+          <section data-background-color="#16161c"><h1>Introduction</h1></section>
+          <section>
+            <h1>What is version control?</h1>
+            <h4>Definition</h4>
+            <p>A system which records changes to files over time.</p>
+
+            <h4>Benefits</h4>
+            <ul>
+              <li>History tracking and documentation</li>
+              <li>Collaboration facilitation</li>
+              <li>Experimentation without risk</li>
+              <li>Accountability and governance</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Life before version control</h4>
+            <ul>
+              <li class="fragment">final.doc</li>
+              <li class="fragment">final_v2.doc</li>
+              <li class="fragment">final_v2_comments.doc</li>
+              <li class="fragment">final_FINAL.doc</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Evolution of version control</h4>
+
+            <ul>
+              <li class="fragment">Local (rsync)</li>
+              <li class="fragment">Centralised (CVS, subversion)</li>
+              <li class="fragment">Distributed (git, mercurial)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>About git</h2>
+
+            <ul>
+              <li>Introduced in 2005 for linux kernel development</li>
+              <li>Priorises:</li>
+              <ul>
+                <li>Speed</li>
+                <li>Data integrity</li>
+                <li>Distributed workflows</li>
+                <li>Branching capabilities</li>
+              </ul>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Key terminology</h4>
+
+            <ul>
+              <li class="fragment"><strong>Repository</strong>: project storage location</li>
+              <li class="fragment"><strong>Commit</strong>: a snapshot of changes</li>
+              <li class="fragment"><strong>Branch</strong>: an independent line of development</li>
+              <li class="fragment"><strong>Staging area</strong>: preparation space for commits</li>
+              <li class="fragment"><strong>Remote</strong>: external repository location</li>
+              <li class="fragment"><strong>Clone</strong>: to copy a repository</li>
+              <li class="fragment"><strong>Working directory</strong>: the current files you can see and edit</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Git object model</h3>
+            <h4>Commits</h4>
+            <ul>
+              <li class="fragment">Contains metadata like author and commit message</li>
+              <li class="fragment">Points to a parent commit (creating a history chain)</li>
+              <li class="fragment">Points to a root tree representing project state</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Git object model</h3>
+            <h4>Trees</h4>
+
+            <ul>
+              <li class="fragment">Represent directories in your project</li>
+              <li class="fragment">Contains references to blobs and other trees</li>
+              <li class="fragment">Each entry has a name, type and hash pointer</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h3>Git object model</h3>
+            <h4>Blobs</h4>
+
+            <ul>
+              <li class="fragment">Store the actual file contents</li>
+              <li class="fragment">Immutable snapshots of file data</li>
+              <li class="fragment">Each file has a hash associated</li>
+            </ul>
+
+            <aside class="notes">
+              This hierarchical structure forms Git's content-addressable filesystem,
+              where each object is identified by the SHA-1 hash of its content.
+            </aside>
+
+          </section>
+
+          <section>
+            <h3>Git object model</h3>
+            <h4>Tags</h4>
+
+            <ul>
+              <li class="fragment">Permanent references to specific commits</li>
+              <li class="fragment">Two different types available</li>
+              <li class="fragment">Easily shared between repositories</li>
+            </ul>
+
+
+            <aside class="notes">
+              <ul>
+                <li><strong>Permanent references</strong>
+                  that point to specific commits, unlike branches which move with new commits,
+                  providing stable markers for important points in history (like releases)
+                </li>
+                <li><strong>Two types available</strong>
+                  lightweight tags (simple pointers to commits) and annotated tags
+                  (full Git objects with tagger name, email, date, message, and optional GPG signature)
+                </li>
+                <li><strong>Easily shared</strong>:
+                  between repositories using `git push --tags`, allowing collaborators to reference
+                  the same significant project milestones
+                </li>
+              </ul>
+            </aside>
+
+          </section>
+
+          <section>
+            <h3>Anatomy of a git</h3>
+            <div class="container">
+              <div class="directory">
+                <div class="root">.git/</div>
+                <div class="item">
+                  <span class="file">HEAD&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <span class="comment"># Points to current branch</span>
+                </div>
+                <div class="item">
+                  <span class="file">config&nbsp;&nbsp;</span>
+                  <span class="comment"># Repository configuration</span>
+                </div>
+                <div class="item">
+                  <span class="folder">hooks/&nbsp;&nbsp;</span>
+                  <span class="comment"># Event scripts</span>
+                </div>
+                <div class="item">
+                  <span class="folder">objects/</span>
+                  <span class="comment"># All Git objects</span>
+                </div>
+                <div class="item">
+                  <span class="folder">refs/&nbsp;&nbsp;&nbsp;</span>
+                  <span class="comment"># Branch pointers</span>
+                </div>
+                <div class="item">
+                  <span class="file">index&nbsp;&nbsp;&nbsp;</span>
+                  <span class="comment"># Staging area</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Criticisms</h3>
+
+            <ul>
+              <li class="fragment">Steep learning curve</li>
+              <li class="fragment">Inconsistent command syntax</li>
+              <li class="fragment">Terminology confusion</li>
+              <li class="fragment">Complex error messages</li>
+              <li class="fragment">Command line focus</li>
+              <li class="fragment">Mutable history</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>So why are we here?</h3>
+
+            <ul>
+              <li>Ubiquitous</li>
+              <li>Powerful branching and merging</li>
+              <li>Works offline</li>
+              <li>Speed and efficiency*</li>
+              <li>Scales well</li>
+              <li>Rich ecosystem and tooling</li>
+            </ul>
+          </section>
+        </section>
+
+        <!--  BASICS -->
+        <section>
+          <section data-background-color="#16161c"><h1>Basics</h1></section>
+
+          <section>
+            <h2>The jump off</h2>
+
+            <ul>
+              <li>Designed to make sure we all start at the same point</li>
+              <li>What is elementary for some is not for others</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Creating a repository</h3>
+
+            <pre>
+              <code data-line-numbers data-trim>
+                # create a directory for working in
+                git init scia-git
+
+                # clone these slides and the training content alongside
+                # this will move before the training content is finalised
+                git clone git@gitlab.data.trade.gov.uk:gareth.clews/git-training
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Basic workflow</h3>
+
+            <ol>
+              <li>Modify the files in working directory</li>
+              <li>Stage the changes with <span class="mono">git add</span></li>
+              <li>Commit changes with <span class="mono">git commit</span></li>
+              <li>Repeat!</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Tracking changes</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="7">
+                pushd scia-git
+                touch README.md
+
+                # check status
+                git status
+
+                # stage changes
+                git add README.md
+                # or (far more dangerous) stage all changes
+                git add -- .  # newer version than `git add *`
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Tracking changes</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="17">
+                # commit changes
+                git commit -m "Add a README"
+
+                # or, stage tracked files and commit
+                git commit -am "Added a README"
+
+                # reset back to previous directory placement
+                popd
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Viewing histories</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="25">
+                # view the commit history in different ways, choose one or try them all
+                git log
+                git log --oneline
+                git log --graph --oneline --all
+                git show HEAD # insert a hash (7 chars) from the above here
+              </code>
+            </pre>
+
+          </section>
+
+          <section>
+            <h1>Exercise</h1>
+
+            <ol>
+              <li>Initialise a new repository for this course content</li>
+              <li>Create and stage some files</li>
+              <li>Make some commits with changes in between</li>
+              <li>View your commit history</li>
+              <li>Modify a file, commit again and view the history</li>
+            </ol>
+
+            <aside class="notes">
+              This exercise is really to just do a couple of simple things. First is to get everybody to have
+              a directory created with a git init, second is to make sure all the DW instances work fine and
+              you're happy interfacing with a terminal in your preferred choice.
+            </aside>
+          </section>
+        </section>
+
+
+        <!-- STRATEGIES -->
+        <section>
+          <section data-background-color="#16161c"><h1>Strategies</h1></section>
+
+          <section>
+            <h2>Working smarter</h2>
+
+            <ul>
+              <li>Biggest conflict creator is not having a strategy</li>
+              <li>We will cover two different approaches to working with git</li>
+              <li>This is not an exhaustive list, but you should pick one</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Trunk based development</h1>
+          </section>
+
+          <section>
+            <img src="trunk-based.svg" alt="Diagram of trunk-based development">
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <!-- CLOSING INFO -->
       </div>
     </div>
  
-    <link rel="stylesheet" href="./nord.hl.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.js"></script>
+    <link rel="stylesheet" href="./horizon.hl.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.min.js"></script>
     <script>
       Reveal.initialize({ 
         plugins: [RevealMath.KaTeX, RevealNotes, RevealHighlight],

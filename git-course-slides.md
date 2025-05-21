@@ -32,14 +32,14 @@
 
 ## With Version Control
 
-![Diagram: Single repository with organized commit history]
+![Diagram: Single repository with organised commit history]
 
 ---
 
 ## Version Control Evolution
 
 - **First Generation:** Local VCS (RCS)
-- **Second Generation:** Centralized VCS (CVS, Subversion)
+- **Second Generation:** Centralised VCS (CVS, Subversion)
 - **Third Generation:** Distributed VCS (Git, Mercurial)
 
 ---
@@ -48,7 +48,7 @@
 
 - Created by Linus Torvalds in 2005 for Linux kernel development
 - Distributed version control system
-- Prioritizes:
+- Prioritises:
   - Speed
   - Data integrity
   - Distributed workflows
@@ -60,7 +60,7 @@
 
 | Feature | Git | SVN | Mercurial |
 |---------|-----|-----|-----------|
-| Repository Model | Distributed | Centralized | Distributed |
+| Repository Model | Distributed | Centralised | Distributed |
 | Branching | Lightweight | Heavy | Lightweight |
 | Learning Curve | Steeper | Moderate | Moderate |
 | Speed | Very Fast | Slower | Fast |
@@ -177,7 +177,7 @@ git config --global core.autocrlf true   # Windows
 ## Creating a Repository
 
 ```bash
-# Initialize a new repository
+# Initialise a new repository
 git init project-name
 
 # Clone an existing repository
@@ -228,7 +228,7 @@ git show <commit-hash>
 
 ## Exercise: Your First Repository
 
-1. Initialize a new repository
+1. Initialise a new repository
 2. Create and stage files
 3. Make commits with proper messages
 4. View your commit history
@@ -283,7 +283,7 @@ git show <commit-hash>
 
 - Multiple long-lived branches
 - Structured release process
-- Formalized branch naming
+- Formalised branch naming
 
 ---
 
@@ -313,7 +313,7 @@ git show <commit-hash>
 - Clear separation of work
 - Structured release process
 - Good for versioned software
-- Clear history visualization
+- Clear history visualisation
 
 **Cons:**
 - Complex with many branches

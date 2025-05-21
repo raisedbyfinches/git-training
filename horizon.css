@@ -1,6 +1,6 @@
 /* Modified from https://revealjs-themes.dzello.com/css/theme/sunblind.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 section,
 section h1,
@@ -133,30 +133,32 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-    margin: 0 0 20px 0;
-    color:  #F09383;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: normal;
-    text-shadow: none;
-    word-wrap: break-word;
+  margin: 0 0 20px 0;
+  color:  #F09383;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-shadow: none;
+  word-wrap: break-word;
 }
 
 .reveal h1 {
-    font-size: 1.8em;
+  font-size: 1.8em;
 }
 
 .reveal h2 {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 .reveal h3 {
-    font-size: 1.8em;
+  color: #09F7A0;
+  font-size: 1.8em;
 }
 
 .reveal h4 {
-    font-size: 1.4em;
+  color: #B877DB;
+  font-size: 1.4em;
 }
 
 
@@ -171,7 +173,6 @@ body {
 
 
 /* Ensure certain elements are never larger than the slide itself */
-
 .reveal img,
 .reveal video,
 .reveal iframe {
@@ -181,7 +182,8 @@ body {
 
 .reveal strong,
 .reveal b {
-    font-weight: bold;
+  color: #F09383;
+  font-weight: bold;
 }
 
 .reveal em {
@@ -276,6 +278,12 @@ body {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
 
+.reveal .hljs {
+  background-color: #16161c;
+  border-radius: 3px;
+}
+
+
 .reveal table {
     margin: auto;
     border-collapse: collapse;
@@ -358,7 +366,7 @@ body {
 
 .reveal section img {
     margin: 15px 0px;
-    background: rgba(255, 255, 255, 0.12);
+    background: #2e303e;
     /* border: 4px solid #363636; */
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
 }
@@ -485,7 +493,8 @@ h1.title {
 }
 
 .col {
-    width: 30%;
+    width: 30vw;
+    max-width: 30vw;
     flex-flow: row nowrap;
 }
 
@@ -493,3 +502,78 @@ h1.title {
     border-radius: 50%;
 }
 
+
+/* git anatomy stuff */
+.container {
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 550px;
+  max-width: 90vw;
+  text-align: left !important;
+}
+
+.directory {
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.root {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.item {
+    position: relative;
+    padding-left: 25px;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #bdc3c7;
+}
+
+.item:last-child::before {
+    height: 12px;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 15px;
+    height: 1px;
+    background-color: #bdc3c7;
+}
+
+.file, .folder {
+    position: relative;
+}
+
+.folder {
+    color: #2980b9;
+}
+
+.file {
+    color: #27ae60;
+}
+
+.comment {
+    color: #7f8c8d;
+    margin-left: 45px;
+    font-style: italic;
+}
+
+.reveal .mono {
+  font-family: "Source Code Pro", monospace;
+  color: #FAC29A;
+}

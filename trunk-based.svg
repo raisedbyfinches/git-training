@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background and border -->
+  <rect x="0" y="0" width="900" height="550" fill="#2E303E" />
+
+  <!-- Title removed -->
+
+  <!-- Main trunk/master branch -->
+  <line x1="100" y1="150" x2="800" y2="150" stroke="#16161c" stroke-width="8" stroke-linecap="round" />
+
+  <!-- Commit circles on trunk -->
+  <circle cx="150" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="220" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="290" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="360" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="430" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="500" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="570" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="640" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="710" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+  <circle cx="780" cy="150" r="12" fill="#F09383" stroke="#1c1e26" stroke-width="2" />
+
+  <!-- Trunk/main label -->
+  <rect x="100" y="80" width="120" height="30" rx="15" fill="#1c1e26" />
+  <text x="160" y="100" font-family="Archivo" font-size="14" fill="white" text-anchor="middle">main</text>
+
+  <!-- Feature branch 1 -->
+  <path d="M 220,150 Q 230,100 260,90 Q 300,80 330,100 Q 350,115 360,150" fill="none" stroke="#e74c3c" stroke-width="3" stroke-linecap="round" />
+  <circle cx="245" cy="96" r="8" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" />
+  <circle cx="290" cy="85" r="8" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" />
+  <circle cx="330" cy="100" r="8" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" />
+
+  <!-- Feature branch 1 label -->
+  <rect x="240" y="45" width="100" height="20" rx="10" fill="#e74c3c" />
+  <text x="290" y="60" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">feature-1</text>
+
+  <!-- Feature branch 2 -->
+  <path d="M 430,150 Q 440,200 470,210 Q 510,220 540,200 Q 560,185 570,150" fill="none" stroke="#9b59b6" stroke-width="3" stroke-linecap="round" />
+  <circle cx="470" cy="210" r="8" fill="#9b59b6" stroke="#2c3e50" stroke-width="1" />
+  <circle cx="505" cy="213" r="8" fill="#9b59b6" stroke="#2c3e50" stroke-width="1" />
+  <circle cx="540" cy="200" r="8" fill="#9b59b6" stroke="#2c3e50" stroke-width="1" />
+
+  <!-- Feature branch 2 label -->
+  <rect x="450" y="230" width="100" height="20" rx="10" fill="#9b59b6" />
+  <text x="500" y="245" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">feature-2</text>
+
+  <!-- Feature branch 3 -->
+  <path d="M 500,150 Q 510,80 550,70 Q 590,60 630,80 Q 650,100 640,150" fill="none" stroke="#27ae60" stroke-width="3" stroke-linecap="round" />
+  <circle cx="550" cy="70" r="8" fill="#27ae60" stroke="#2c3e50" stroke-width="1" />
+  <circle cx="580" cy="65" r="8" fill="#27ae60" stroke="#2c3e50" stroke-width="1" />
+  <circle cx="630" cy="80" r="8" fill="#27ae60" stroke="#2c3e50" stroke-width="1" />
+
+  <!-- Feature branch 3 label -->
+  <rect x="530" y="25" width="100" height="20" rx="10" fill="#27ae60" />
+  <text x="580" y="40" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">feature-3</text>
+
+  <!-- Continuous Delivery Pipeline -->
+  <rect x="150" y="300" width="630" height="100" rx="10" fill="#232530" stroke="#16161c" stroke-width="1" />
+  <text x="465" y="325" font-family="Archivo" font-size="16" text-anchor="middle" fill="white" font-weight="bold">Continuous Delivery Pipeline</text>
+
+  <!-- CD Pipeline stages -->
+  <rect x="170" y="335" width="100" height="50" rx="5" fill="#1A1C23" />
+  <text x="220" y="365" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">Build</text>
+
+  <rect x="290" y="335" width="100" height="50" rx="5" fill="#1A1C23" />
+  <text x="340" y="365" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">Test</text>
+
+  <rect x="410" y="335" width="100" height="50" rx="5" fill="#1A1C23" />
+  <text x="460" y="365" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">Integration</text>
+
+  <rect x="530" y="335" width="100" height="50" rx="5" fill="#1A1C23" />
+  <text x="580" y="365" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">Staging</text>
+
+  <rect x="650" y="335" width="100" height="50" rx="5" fill="#1A1C23" />
+  <text x="700" y="365" font-family="Archivo" font-size="12" fill="white" text-anchor="middle">Production</text>
+
+  <!-- Arrows between pipeline stages -->
+  <path d="M 270,360 L 290,360" stroke="#da103f" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 390,360 L 410,360" stroke="#da103f" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 510,360 L 530,360" stroke="#da103f" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 630,360 L 650,360" stroke="#da103f" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Pipeline trigger arrows -->
+  <path d="M 290,170 L 290,300" stroke="#da103f" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+  <path d="M 430,170 L 430,300" stroke="#da103f" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+  <path d="M 570,170 L 570,300" stroke="#da103f" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+  <path d="M 710,170 L 710,300" stroke="#da103f" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+
+  <!-- Key points removed -->
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#da103f" />
+    </marker>
+  </defs>
+
+</svg>
