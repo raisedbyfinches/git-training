@@ -60,6 +60,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    ```
 
 **Discussion Questions:**
+
 - What information does Git store with each commit?
 - How does the staging area help in organising commits?
 - What happens if you modify a file after staging but before committing?
@@ -128,6 +129,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    ```
 
 **Discussion Questions:**
+
 - How does Git determine if a merge can be done automatically?
 - What triggers a merge conflict?
 - What strategies can prevent merge conflicts?
@@ -186,6 +188,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    ```
 
 **Discussion Questions:**
+
 - Which workflow felt more natural for this exercise?
 - What challenges did you encounter with your chosen workflow?
 - How would this workflow scale with more team members?
@@ -286,6 +289,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    ```
 
 **Discussion Questions:**
+
 - When is it appropriate to use rebase vs. merge?
 - What are the risks of rewriting history with commands like reset?
 - How can you recover from seemingly "lost" commits?
@@ -359,6 +363,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    ```
 
 **Questions to Answer:**
+
 1. What naming patterns make commit messages most useful when reviewing history?
 2. How would you find when a specific line of code was introduced?
 3. What differences do you notice between viewing history with `--stat` vs `-p`?
@@ -417,6 +422,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    - Reflect on the workflow effectiveness
 
 **Questions to Answer:**
+
 1. What communication would have been necessary in a real team setting?
 2. What Git hooks might help enforce your chosen workflow?
 3. How would you onboard a new team member to this workflow?
@@ -494,6 +500,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    - Show how they connect in your repository
 
 **Questions to Answer:**
+
 1. How does Git's content-addressed storage ensure data integrity?
 2. How do branches differ from commits in Git's object model?
 3. What happens internally when you run common Git commands like `add`, `commit`, and `branch`?
@@ -595,6 +602,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    ```
 
 **Questions to Answer:**
+
 1. What are the ethical considerations of rewriting history in a shared repository?
 2. When is interactive rebasing preferable to merge commits?
 3. How would you communicate history rewrites to teammates?
@@ -672,6 +680,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    ```
 
 **Questions to Answer:**
+
 1. How could automated tests help with the bisect process?
 2. What strategies would you use for bisecting bugs in larger codebases?
 3. How would you document the bug and fix for team knowledge sharing?
