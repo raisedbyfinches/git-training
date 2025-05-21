@@ -31,7 +31,7 @@ By the end of this training, participants will be able to:
   - Definition of version control
   - History of version control systems
   - Benefits of version control in software development
-  - Types of version control systems (centralized vs. distributed)
+  - Types of version control systems (centralised vs. distributed)
 
 - **Interactive Activity:**
   - Group discussion: "Pain points without version control"
@@ -108,7 +108,7 @@ By the end of this training, participants will be able to:
 
 - **Visual Aids:**
   - Trunk-based workflow diagram
-  - Example commit history visualization
+  - Example commit history visualisation
 
 #### 3.2 Git Flow Strategy (15 minutes)
 - **Lecture Content:**
@@ -119,7 +119,7 @@ By the end of this training, participants will be able to:
 
 - **Visual Aids:**
   - Git Flow diagram
-  - Branch lifecycle visualization
+  - Branch lifecycle visualisation
 
 #### 3.3 Choosing the Right Workflow (10 minutes)
 - **Lecture Content:**
@@ -156,7 +156,7 @@ By the end of this training, participants will be able to:
 - **Lecture Content:**
   - Why histories diverge
   - Local vs. remote tracking
-  - Visualization of divergent branches
+  - Visualisation of divergent branches
 
 - **Demonstration:**
   - Creating a divergent history scenario
@@ -280,12 +280,12 @@ By the end of this training, participants will be able to:
 - **Slide 3:** What is version control? (with before/after illustrations)
 - **Slide 4:** History of version control systems (timeline)
 - **Slide 5:** Git origin story (with Linus Torvalds photo)
-- **Slide 6:** Distributed vs. Centralized VCS (comparison diagram)
+- **Slide 6:** Distributed vs. Centralised VCS (comparison diagram)
 - **Slide 7:** Key Git terminology (visual glossary)
 
 ### Git Internals Section
 - **Slide 8:** Git's object model (diagram showing blobs, trees, commits)
-- **Slide 9:** SHA-1 hashing visualization
+- **Slide 9:** SHA-1 hashing visualisation
 - **Slide 10:** The .git directory structure (tree view)
 - **Slide 11:** How changes are tracked (visual diff)
 - **Slide 12:** Git's staging area explained (three-tree architecture)
@@ -299,7 +299,7 @@ By the end of this training, participants will be able to:
 
 ### Troubleshooting Section
 - **Slide 18:** Common Git error messages decoded
-- **Slide 19:** Divergent histories visualization
+- **Slide 19:** Divergent histories visualisation
 - **Slide 20:** Rebasing illustrated (before/after diagrams)
 - **Slide 21:** Merge conflict resolution walkthrough
 - **Slide 22:** Git recovery tools and techniques
@@ -316,7 +316,7 @@ By the end of this training, participants will be able to:
 
 ### Recommended Handout Materials
 1. **Command Reference Sheet**
-   - Categorized by function (basic, branch management, remote operations)
+   - Categorised by function (basic, branch management, remote operations)
    - Common flags and options
    - Example usage
 
@@ -348,7 +348,7 @@ By the end of this training, participants will be able to:
 ### Session Delivery Tips
 - Begin with a quick assessment of participant experience levels
 - Adjust pace based on group comprehension
-- Emphasize practical application over theory
+- Emphasise practical application over theory
 - Use real-world analogies for abstract concepts
 - Allow extra time for troubleshooting during exercises
 - Capture questions that require follow-up research
@@ -356,7 +356,7 @@ By the end of this training, participants will be able to:
 ### Common Sticking Points
 - Conceptual understanding of staging area
 - Distinguishing between local and remote operations
-- Visualization of branching strategies
+- Visualisation of branching strategies
 - Rebasing concepts and conflicts
 - Recovering from detached HEAD states
 

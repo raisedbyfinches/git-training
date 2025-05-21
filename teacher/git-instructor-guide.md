@@ -75,7 +75,7 @@ This guide provides detailed instructions for teaching, including teaching tips,
    - Start with the "replay" metaphor: rebasing is replaying your changes on a new base
    - Contrast with merging using railroad track diagrams
    - Show a live demonstration with visible history changes
-   - Emphasize the "golden rule" about not rebasing public history
+   - Emphasise the "golden rule" about not rebasing public history
 
 3. **Detached HEAD:**
    - Use the "bookmark" analogy: branches are bookmarks, detached HEAD is reading without a bookmark
@@ -84,7 +84,7 @@ This guide provides detailed instructions for teaching, including teaching tips,
    - Show recovery techniques step by step
 
 4. **Index/staging area:**
-   - Use the "packing a suitcase" analogy: you decide what goes in before finalizing
+   - Use the "packing a suitcase" analogy: you decide what goes in before finalising
    - Show partial staging of files and hunks
    - Demonstrate how the index enables atomic commits
    - Build the three-tree model (working directory, index, repository)
@@ -94,7 +94,7 @@ This guide provides detailed instructions for teaching, including teaching tips,
 ### Part 1: Introduction to Git
 
 **Key teaching points:**
-- Emphasize the distributed nature as Git's key innovation
+- Emphasise the distributed nature as Git's key innovation
 - Connect version control benefits to participants' daily work
 - Address common misconceptions about Git vs. GitHub
 - Build a logical progression from problem (no version control) to solution (Git)
@@ -108,19 +108,19 @@ Q: "Do I need GitHub to use Git?"
 A: "No, Git is a standalone tool. GitHub is a service that hosts Git repositories and adds collaboration features. You can use Git locally or with any Git hosting service like GitLab, Bitbucket, or your own server."
 
 Q: "Why does Git seem so complicated?"
-A: "Git was designed by kernel developers for kernel developers, prioritizing power and flexibility over ease of use. Its terminology can be confusing, but once you understand the core concepts, it becomes more intuitive. We'll focus on building that foundation today."
+A: "Git was designed by kernel developers for kernel developers, prioritising power and flexibility over ease of use. Its terminology can be confusing, but once you understand the core concepts, it becomes more intuitive. We'll focus on building that foundation today."
 
 ### Part 2: Git Basics Practice
 
 **Key teaching points:**
-- Emphasize muscle memory through repetition of basic commands
+- Emphasise muscle memory through repetition of basic commands
 - Connect commands to the conceptual model established earlier
 - Show command variations to accommodate different preferences
 - Highlight common pitfalls and how to avoid them
 
 **Demonstration script:**
 
-1. Initialize repository:
+1. Initialise repository:
    ```bash
    mkdir demo-project
    cd demo-project
@@ -194,7 +194,7 @@ A: "Git was designed by kernel developers for kernel developers, prioritizing po
 ### Part 4: Collaborative Git Practice
 
 **Key teaching points:**
-- Emphasize communication aspects of collaboration
+- Emphasise communication aspects of collaboration
 - Demonstrate a complete collaborative cycle
 - Show conflict resolution techniques step by step
 - Discuss team conventions and standards
@@ -236,7 +236,7 @@ A: "Git was designed by kernel developers for kernel developers, prioritizing po
    
    git add shared.txt
    git status
-   git commit  # Finalize merge
+   git commit  # Finalise merge
    ```
    *Explain*: "After editing the file to our satisfaction, we tell Git the conflict is resolved by adding it, then complete the merge."
 
@@ -311,7 +311,7 @@ A: "Git was designed by kernel developers for kernel developers, prioritizing po
 - Preview advanced concepts to spark continued learning
 - Connect take-home exercises to real-world applications
 - Provide clear paths for further skill development
-- Emphasize Git as a career-long learning journey
+- Emphasise Git as a career-long learning journey
 
 **Exercise preview approach:**
 1. Briefly demonstrate one advanced concept (e.g., bisect)

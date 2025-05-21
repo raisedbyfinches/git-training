@@ -61,7 +61,7 @@ This document contains both in-class exercises and take-home challenges to reinf
 
 **Discussion Questions:**
 - What information does Git store with each commit?
-- How does the staging area help in organizing commits?
+- How does the staging area help in organising commits?
 - What happens if you modify a file after staging but before committing?
 
 ---
@@ -176,7 +176,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    # Create release branch
    git checkout -b release/1.0 develop
    
-   # Finalize release
+   # Finalise release
    git checkout main
    git merge release/1.0
    git tag -a v1.0 -m "Version 1.0"
@@ -404,7 +404,7 @@ This document contains both in-class exercises and take-home challenges to reinf
    - In dev2-repo: Make changes to main
    - In dev1-repo: Try to merge feature to main and push
    - In dev2-repo: Push changes to main
-   - Resolve the resulting conflicts and synchronization issues
+   - Resolve the resulting conflicts and synchronisation issues
 
 4. **Implement a chosen workflow:**
    - If using Trunk-Based: Create short-lived feature branches and merge frequently
