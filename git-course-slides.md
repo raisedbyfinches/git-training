@@ -353,13 +353,123 @@ git show <commit-hash>
 
 ## Case Study Discussion
 
-**Scenario:** E-commerce platform with:
-- 5 developers
-- Weekly releases
-- Automated testing coverage at 60%
-- Mobile app and website components
+### 🎓 **Case Study: Predictive Maintenance for a Manufacturing Company**
 
-*Which workflow would you recommend?*
+#### **Project Background**
+
+You're on a data science team at a mid-sized manufacturing firm. Your task is to build a predictive model to forecast equipment failures using sensor data. The goal is to deploy this as a web service for factory engineers.
+
+#### **Project Team**
+
+* 3 Data Scientists
+* 1 ML Engineer
+* 2 Backend Developers
+* 1 DevOps Engineer
+
+---
+
+### 🚧 **Project Phases**
+
+1. **Exploration & Prototyping**
+2. **Model Development & Evaluation**
+3. **Integration with Backend API**
+4. **Deployment & Monitoring**
+5. **Iterative Improvements**
+
+---
+
+### 🔁 Option 1: Trunk-Based Development
+
+**You choose this strategy when:**
+
+* Your team is small and collaborative.
+* You deploy frequently (weekly or daily).
+* You have a CI/CD pipeline and automated tests.
+* You can communicate easily to avoid stepping on each other’s toes.
+
+**How it looks:**
+
+* Everyone commits to `main` or small feature branches merged rapidly.
+* Code reviews are fast, testing is automated.
+* Models and pipelines evolve incrementally.
+* Experimentation is version-controlled but integrated continuously.
+
+**Benefits:**
+
+* Fast iteration on experiments and models.
+* Minimal merge conflicts due to small diffs.
+* Quick bug fixes and real-time collaboration.
+
+**Challenges:**
+
+* Requires strong test coverage.
+* Needs discipline to keep the trunk healthy.
+* Might be chaotic without good CI/CD and versioning strategies for models/data.
+
+**When it works best:**
+
+> During model development or when deploying fast, iterative improvements to the API.
+
+---
+
+### 🧭 Option 2: Git Flow
+
+**You choose this strategy when:**
+
+* Releases are scheduled and infrequent.
+* You need multiple model versions in production.
+* You have a QA phase before each release.
+* You want a stable `main` branch always ready for production.
+
+**How it looks:**
+
+* Feature branches for model experiments.
+* Develop branch for integration.
+* Release branches to prep for QA.
+* Hotfixes patched into `main` and merged back.
+
+**Benefits:**
+
+* Stability for production code.
+* Controlled releases and traceability.
+* Good for managing long-term experiments or model audits.
+
+**Challenges:**
+
+* More overhead, slower iteration.
+* Merges are more complex.
+* Requires team coordination and Git discipline.
+
+**When it works best:**
+
+> When maintaining a versioned model library or supporting regulated environments.
+
+---
+
+### 🧠 **Teaching Takeaway:**
+
+Ask students to **analyze the trade-offs based on project goals**, such as:
+
+* **Speed vs. Stability**
+* **Experimentation vs. Governance**
+* **Small teams vs. Large, distributed teams**
+
+---
+
+### 💬 Discussion Prompt:
+
+> Suppose your predictive model needs to be updated monthly with new data and re-deployed. Would you prefer trunk-based development or git flow, and why?
+
+Encourage students to consider:
+
+* How often they'll release
+* How they'll handle model versioning
+* What the risks of bugs or bad models are
+
+---
+
+Would you like this packaged as a downloadable PDF or slide format for classroom use?
+
 
 ---
 

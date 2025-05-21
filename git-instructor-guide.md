@@ -1,6 +1,6 @@
 # Git Training Course: Instructor Guide
 
-This guide provides detailed instructions for teaching the 3-hour Git training course, including teaching tips, common questions, and preparation guidance.
+This guide provides detailed instructions for teaching, including teaching tips, common questions, and preparation guidance.
 
 ## Pre-Course Preparation
 
@@ -17,12 +17,11 @@ This guide provides detailed instructions for teaching the 3-hour Git training c
    - A clean repository for basic demonstrations
    - A repository with multiple branches for workflow demonstrations
    - A repository with deliberate problems for troubleshooting exercises
-   - A repository with complex history for visualization
+   - A repository with complex history for visualisation
 
 3. **Classroom setup:**
-   - Request participants install Git before the session
+   - Request participants install Git before the session if not working in Data Workspace
    - Prepare a troubleshooting guide for installation issues
-   - Have USB drives with Git installers for major platforms
    - Test classroom projector/screen with Git GUI tools
 
 ### Content Preparation

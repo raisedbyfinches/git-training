@@ -407,24 +407,192 @@
             <img src="trunk-based.svg" alt="Diagram of trunk-based development">
           </section>
 
+          <section>
+            <h3>Trunk based development</h3>
+            <ul>
+              <li>Keep branches small and short-lived</li>
+              <li>Merge frequently to main</li>
+              <li>Deploy from main</li>
+              <li>Use feature flags for incomplete features</li>
+              <li>Automated testing becomes crucial</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Pros</h3>
+
+            <ul>
+              <li>Reduces merge complexity</li>
+              <li>Facilitates continuous integration</li>
+              <li>Simpler workflow</li>
+              <li>Less context switching</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Cons</h3>
+
+            <ul>
+              <li>Requires discipline</li>
+              <li>Needs strong automated testing</li>
+              <li>May be challenging if the features are larger</li>
+              <li>Less formal release process</li>
+            </ul>
+          </section>
 
 
+          <section>
+            <h1>Git Flow Strategy</h1>
+          </section>
 
+          <section>
+            <img src="flow-based.svg" alt="Diagram of trunk-based development">
 
+            <aside class="notes">
 
+              <p>This is far more complicated looking. This shows:</p>
 
+              <p>
+              1. **Two Main Branches**:
+                <ul>
+                  <li> **Main/Master branch** (dark blue at top): Contains production-ready code</li>
+                  <li>**Develop branch** (green below it): Integration branch for ongoing development</li>
+                </ul>
+              </p>
+              <p>
+              2. **Supporting Branches**:
+              <ul>
+                <li>**Feature branches** (purple): Branch off from develop and merge back into develop</li>
+                <li>Shown as short curves above the develop branch</li>
+                <li>Examples: feature/login and feature/search</li>
+              </ul>
 
+              <ul>
+                <li>**Release branch** (orange): Branch off from develop and merge into both main and develop</li>
+                <li>Created when develop has enough features for a release</li>
+                <li>Used for final testing and bug fixes before production</li>
+                <li>Example: release</li>
+              </ul>
 
+              <ul>
+                <li>**Hotfix branch** (red): Branch directly off main for critical production fixes</li>
+                <li>Merges back to both main and develop</li>
+                <li>Example: hotfix/bug-123</li>
+              </ul>
+              </p>
+              <p>
+              3. **Version Tags**:
+                <ul>
+                  <li> Tags on main branch: v1.0, v1.1, v2.0, v2.1</li>
+                  <li> Each represents a stable production release</li>
+                </ul>
+              </p>
 
+             <p>
+              4. **Deployment Flow**:
+               <ul>
+                 <li>Dotted lines from main branch down to deployment environments</li>
+                 <li>Production versions corresponding to each tagged release</li>
+               </ul>
+             </p>
 
+             <p>
+              Unlike trunk-based development, Git Flow has more structured branching
+              patterns and is designed for scheduled releases rather than continuous delivery.
+             </p>
+            </aside>
+          </section>
 
+          <section>
+            <h3>Git Flow Strategy</h3>
+            <ul>
+              <li>Multiple long-lived branches</li>
+              <li>Structured release process</li>
+              <li>Formalised branch naming</li>
+            </ul>
+          </section>
 
+          <section>
+            <h3>Naming branches</h3>
 
+            <ul>
+              <li class="fragment"><strong>main</strong>: production code</li>
+              <li class="fragment"><strong>develop</strong>: integration branch</li>
+              <li class="fragment"><strong>feature/*</strong>: new development</li>
+              <li class="fragment"><strong>release/*</strong>: release preparation</li>
+              <li class="fragment"><strong>hotfix/*</strong>: production fixes</li>
+            </ul>
+          </section>
 
+          <section>
+            <h3>Lifecycle</h3>
 
+            <ol>
+              <li class="fragment">Feature developed on feature branch</li>
+              <li class="fragment">Feature merged to develop</li>
+              <li class="fragment">Release branch created from develop</li>
+              <li class="fragment">Release branch merged to main and develop</li>
+              <li class="fragment">Hotfixes applied directly to main and develop</li>
+            </ol>
+          </section>
 
+          <section>
+            <h3>Pros</h3>
 
+            <ul>
+              <li>Clear separation of work</li>
+              <li>Structured release process</li>
+              <li>Good for versioned software</li>
+              <li>Clear history visualisation</li>
+            </ul>
+          </section>
 
+          <section>
+            <h3>Cons</h3>
+
+            <ul>
+              <li>Complex with many branches</li>
+              <li>Potential for long-lived branches</li>
+              <li>Can encourage delayed integration</li>
+              <li>Overhead is larger for simpler projects</li>
+            </ul>
+          </section>
+
+          <section><h1>Choosing the right workflow</h1></section>
+
+          <section>
+            <h3>By team size</h3>
+
+            <ul>
+              <li>Smaller teams → simpler workflows</li>
+              <li>Larger teams → more structure</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>By release frequency</h3>
+
+            <ul>
+              <li>Continuous delivery → trunk-based</li>
+              <li>Releases → Git Flow</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>By project type</h3>
+
+            <ul>
+              <li>Web application → trunk-based</li>
+              <li>Versioned product → Git Flow</li>
+            </ul>
+
+            <aside class="notes">
+              This means that for the majority of tasks in DBT which are not web applications that Git Flow should be used.
+            </aside>
+          </section>
+
+          <section>
+          </section>
 
 
 
