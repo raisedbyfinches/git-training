@@ -26,7 +26,7 @@ This guide provides detailed instructions for teaching, including teaching tips,
 
 ### Content Preparation
 
-1. **Customize examples:**
+1. **Customise examples:**
    - Adjust examples to match participants' domain/industry
    - Consider the programming languages used by participants
    - Modify workflow examples to match company practices

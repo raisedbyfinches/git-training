@@ -591,13 +591,328 @@
             </aside>
           </section>
 
+        </section>
+
+
+        <!-- CASE STUDY -->
+        <section>
+          <section data-background-color="#16161c"><h1>Case study</h1></section>
+
           <section>
+            <h2>Description</h2>
+            <p>
+              You're on a data science team and have to build a predictive model to forecast equipment failures.
+              The goal is to deploy this as a web service for factory engineers.
+            </p>
+          </section>
+
+          <section>
+            <h2>Project team</h2>
+            <ul>
+              <li>3 Data Scientists</li>
+              <li>1 ML Engineer</li>
+              <li>2 Backend Developers</li>
+              <li>1 DevOps Engineer</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Project phases</h2>
+            <ol>
+              <li>Exploration & prototyping</li>
+              <li>Model development & evaluation</li>
+              <li>Integration with back end API</li>
+              <li>Deployment & monitoring</li>
+              <li>Iterative improvements</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Pick a strategy</h3>
+            <p><strong>Trunk-based development</strong> or <strong>Git Flow</strong>?</p>
+          </section>
+        </section>
+
+
+        <section>
+          <section data-background-color="#16161c"><h1>Resolving conflict</h1></section>
+
+          <section>
+            <h3>Branches</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="30">
+                # get back to it
+                pushd scia-training
+
+                # list current branches
+                git branch
+
+                # create a branch
+                git branch feature-login
+
+                # switch to a branch
+                git switch feature-login
+                # older versions of git use `checkout` not `switch`
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Branches</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="42">
+                # create and switch in one command!
+                git switch -c feature-login
+
+                # delete a branch
+                git switch main
+                git branch -D feature-login
+
+                popd
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Merging</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="50">
+                # -- SETUP --
+                # recreate the other branch after we previously deleted it
+                git switch -c feature-login
+
+                # add a change, then commit it
+                touch CONTRIBUTING.md
+                git add CONTRIBUTING.md
+                git commit -m "doc: add contributing guidelines"
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Merging</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="58">
+                # switch to the *target* branch
+                git switch main
+
+                # merge the branch
+                git merge feature-login
+
+                # housekeeping: delete the branch after successful merge
+                git branch -d feature-login
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Conflict resolution</h3>
+
+            <p>When git cannot automatically merge files for you:</p>
+
+            <ol>
+              <li>Git marks conflicts in files</li>
+              <li>Manually edit the files to resolve</li>
+              <li>Stage resolved files (<span class="mono">git add</span>)</li>
+              <li>Complete the merge (<span class="mono">git commit</span>)</li>
+            </ol>
+          </section>
+
+          <section>
+            <h1>Exercise</h1>
+
+            <aside class="notes">If you can't think of what to do for each step, there are example changes in the
+               exercise handout, please use those.</aside>
+
+            <ol>
+              <li>Create a feature branch</li>
+              <li>Make changes on the feature branch, and commit them</li>
+              <li>Switch back to main and make different changes, and commit them</li>
+              <li>Merge the feature branch</li>
+              <li>Resolve any conflicts</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section data-background-color="#16161c"><h1>Troubleshooting</h1></section>
+
+          <section>
+            <h3>Divergent histories</h3>
+
+            <ul>
+              <li>Local and remote histories have different commits</li>
+              <li>Common when multiple developers work on same branch</li>
+              <li>Occurs after pulling with local commits</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Divergent histories</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="66">
+                # Option 1: merge remote changes with local merge commit
+                git pull
+
+                # Option 2: rebase local changes on top of remote
+                git pull --rebase
+
+                # Option 3: manual approach
+                git fetch
+                git rebase origin/main
+                # or merge if you prefer that to rebase
+                git fetch
+                git merge origin/main
+                # I won't go into this but there's a description in the supporting content
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Example</h2>
+            <aside class="notes">This will be a walkthrough example in emacs, the setup will be complex but I'll make it work.</aside>
           </section>
 
 
+          <section>
+            <h3>Detached HEAD</h3>
 
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="79">
+                # how you got to this point
+                git checkout HEAD~1  # any commit will do
 
+                # you've accidentally checked out a commit and not a branch
+                # Option 1: create a new branch to retain commits
+                git switch -c <new-branch-name>
+
+                # Option 2: abort, go back to where you were
+                git switch -
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Undoing changes</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="88">
+                # Unstage a file
+                git restore --staged file.txt
+
+                # discard working directory changes
+                git restore file.txt
+
+                # undo last commit (keep changes staged)
+                git reset --soft HEAD~1
+
+                # undo last commit (discarding changes)
+                git reset --hard HEAD~1
+
+                # create new "undo" commit
+                git revert HEAD
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h3>Handling stashes</h3>
+
+            <pre>
+              <code data-trim data-line-numbers data-ln-start-from="102">
+                # Save work in progress
+                git stash
+
+                # List stashes
+                git stash list
+
+                # Apply the most recent stash
+                git stash apply
+
+                # Apply a specific stash
+                git stash apply stash@{2}
+
+                # Apply and remove stash
+                git stash pop
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h1>Exercise</h1>
+
+            <ol>
+              <li>Resolve a merge conflict</li>
+              <li>Recover from detached HEAD</li>
+              <li>Stash changes and apply elsewhere</li>
+              <li>Fix a divergent history with rebase</li>
+            </ol>
+          </section>
         </section>
+
+        <section>
+          <section data-background-color="#16161c"><h1>What next?</h1></section>
+
+          <section>
+            <h3>Advanced topics</h3>
+
+            <ul>
+              <li><strong>Hooks</strong>: automated scripts triggered by events</li>
+              <li><strong>Submodules</strong>: repositories within repositories</li>
+              <li><strong>LFS</strong>: Large File Storage for binary files</li>
+              <li><strong>Bisect</strong>: binary search through the history to find bugs</li>
+              <li><strong>Worktrees</strong>: multiple working directories for one repo</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Homework</h3>
+
+            <ul>
+              <li><strong>Basic</strong>: repository setup and branch management</li>
+              <li><strong>Intermediate</strong>: collaborative workflows and time travel</li>
+              <li><strong>Advanced</strong>: rebasing workshop and git internals</li>
+            </ul>
+
+            <p>Detailed instructions in handout</p>
+          </section>
+
+          <section>
+            <h3>Additional resources</h3>
+
+            <ul>
+              <li><a href="https://git-scm.com/doc">Official git documentation</a></li>
+              <li><a href="https://git-scm.com/book">Pro git book</a> (free online)</li>
+              <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">Cheat sheet</a></li>
+              <li><a href="https://learngitbranching.js.org">Interactive branching tutorial</a></li>
+              <li><a href="https://ohshitgit.com">Oh Shit, Git!?!</a> (practical recovery tips)</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section data-background-color="#16161c"><h1>Conclusion</h1></section>
+
+          <section>
+            <ul>
+              <li>Git is powerful but requires practice and planning</li>
+              <li>Choose workflows that match your team and project</li>
+              <li>Problem-solving skills come with experience</li>
+              <li>Continue your learning</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Q&A</h1>
+          </section>
+        </section>
+
+
         <!-- CLOSING INFO -->
       </div>
     </div>

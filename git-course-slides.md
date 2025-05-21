@@ -458,18 +458,14 @@ Ask students to **analyze the trade-offs based on project goals**, such as:
 
 ### 💬 Discussion Prompt:
 
-> Suppose your predictive model needs to be updated monthly with new data and re-deployed. Would you prefer trunk-based development or git flow, and why?
+> Suppose your predictive model needs to be updated monthly with new data and re-deployed.
+> Would you prefer trunk-based development or git flow, and why?
 
 Encourage students to consider:
 
 * How often they'll release
 * How they'll handle model versioning
 * What the risks of bugs or bad models are
-
----
-
-Would you like this packaged as a downloadable PDF or slide format for classroom use?
-
 
 ---
 
